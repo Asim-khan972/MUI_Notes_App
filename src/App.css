@@ -1,0 +1,20 @@
+/* src/UserData.css */
+.user-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.user-table th {
+  cursor: pointer;
+}
+
+.user-table th:hover {
+  background-color: #f5f5f5;
+}
