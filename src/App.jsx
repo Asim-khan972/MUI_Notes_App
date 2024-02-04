@@ -9,7 +9,7 @@ import Layout from "./components/Layout";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#fe34fd",
+      main: "#fefefe",
     },
     secondary: purple,
   },

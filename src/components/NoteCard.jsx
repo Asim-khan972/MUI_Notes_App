@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardHeader, CardContent } from "@mui/material";
+import { Card, CardHeader, CardContent, Avatar } from "@mui/material";
 import { Typography } from "@mui/material";
 import { DeleteOutline } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
@@ -9,6 +9,7 @@ export default function NoteCard({ note, handleDelete }) {
     <div>
       <Card elevation={1}>
         <CardHeader
+          avatar={<Avatar>{note.category[0].toUpperCase()}</Avatar>}
           action={
             <IconButton onClick={() => handleDelete(note.id)}>
               <DeleteOutline />

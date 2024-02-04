@@ -91,6 +91,7 @@ export default function Create() {
             <RadioGroup
               value={category}
               onChange={(e) => setCategory(e.target.value)}
+              color="secondary"
             >
               <FormControlLabel
                 value="money"

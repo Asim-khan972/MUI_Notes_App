@@ -10,11 +10,11 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import Avatar from "@mui/material/Avatar";
 import { Toolbar } from "@mui/material";
 import { AddCircleOutlineOutlined, SubjectOutlined } from "@mui/icons-material";
-import { useNavigate, useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { format } from "date-fns";
 
 const MyStyledComponent = styled("div")({
   backgroundColor: "#f9f9f9",
@@ -46,8 +46,23 @@ export default function Layout({ children }) {
   return (
     <div style={{ display: "flex" }}>
       {/* app bar */}
-      <div>app bar</div>
-
+      <AppBar
+        position="fixed"
+        elevation={0}
+        // color="primary"
+        sx={{
+          width: `calc(100% - 240px)`,
+          marginLeft: "240px",
+        }}
+      >
+        <Toolbar>
+          <Typography sx={{ flexGrow: 1 }}>
+            Today is the {format(new Date(), "do MMMM Y")}
+          </Typography>
+          <Typography sm={{ align: "right" }}>Asim khan</Typography>
+          <Avatar src="/mario-av.png" sx={{ marginLeft: "10px" }} />
+        </Toolbar>
+      </AppBar>
       <Drawer
         variant="permanent"
         sx={{
@@ -75,6 +90,7 @@ export default function Layout({ children }) {
         </List>
       </Drawer>
       <MyStyledComponent>
+        <div style={{ marginTop: "100px" }}></div>
         <div>{children}</div>
       </MyStyledComponent>
     </div>
