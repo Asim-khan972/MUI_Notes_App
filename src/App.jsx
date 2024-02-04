@@ -8,7 +8,7 @@ import { lime, purple } from "@mui/material/colors";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#fefefe",
+      main: "#fe34fd",
     },
     secondary: purple,
   },
